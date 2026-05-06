@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1d1c17",
+                        "outline": "#8a726b",
+                        "on-tertiary-fixed": "#251a00",
+                        "secondary-container": "#c9ead9",
+                        "on-primary-fixed": "#3a0a00",
+                        "tertiary-fixed": "#ffdf95",
+                        "surface-tint": "#a13f20",
+                        "on-secondary-fixed": "#022016",
+                        "tertiary": "#72590e",
+                        "surface-variant": "#e7e2da",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#476558",
+                        "surface-container-high": "#ece8e0",
+                        "secondary-fixed-dim": "#adcebe",
+                        "background": "#fef9f1",
+                        "surface-container": "#f2ede5",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#be5434",
+                        "primary": "#9e3d1e",
+                        "on-secondary-fixed-variant": "#304d40",
+                        "outline-variant": "#ddc0b8",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f5f0e8",
+                        "tertiary-container": "#8d7127",
+                        "surface": "#fef9f1",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#81280b",
+                        "inverse-primary": "#ffb59f",
+                        "surface-bright": "#fef9f1",
+                        "inverse-surface": "#32302b",
+                        "primary-fixed": "#ffdbd1",
+                        "surface-container-low": "#f8f3eb",
+                        "secondary-fixed": "#c9ead9",
+                        "on-tertiary-container": "#fffbff",
+                        "tertiary-fixed-dim": "#e5c370",
+                        "on-surface": "#1d1c17",
+                        "on-tertiary-fixed-variant": "#594400",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#fffbff",
+                        "surface-dim": "#ded9d2",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#4d6b5d",
+                        "on-surface-variant": "#57423c",
+                        "surface-container-highest": "#e7e2da",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb59f",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "12px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Noto Serif"],
+                        "headline-xl": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .texture-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .botanical-float {
+            filter: contrast(0.8) sepia(0.2);
+            pointer-events: none;
+        }
+        .card-hover-effect:hover img {
+            transform: scale(1.05);
+        }
+        .card-hover-effect:hover .texture-reveal {
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Texture Overlay -->
+<div class="fixed inset-0 texture-overlay z-[100]"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-[#FDFCF8]/90 backdrop-blur-md dark:bg-stone-950/90 border-b border-stone-200/50 dark:border-stone-800/50">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-[1200px] mx-auto">
+<div class="font-serif text-3xl font-light tracking-[0.2em] text-stone-800 dark:text-stone-100">ANTAH</div>
+<div class="hidden md:flex items-center space-x-8 font-serif tracking-tight text-sm uppercase">
+<a class="font-headline-md text-headline-md text-[#C75B3A] border-b border-[#C75B3A]/30 pb-1" href="home_antah.html">Home</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="journal_antah.html">About</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="services_antah.html">Services</a>
+<a class="text-[#C75B3A] dark:text-orange-300 border-b border-[#C75B3A]/30 pb-1 transition-colors duration-500" href="portfolio_antah.html">Portfolio</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="contact_antah.html">Contact</a>
+</div>
+</header>
+<main class="pt-32 pb-xl">
+<!-- Hero Section: Grid Collage -->
+<section class="max-w-[1200px] mx-auto px-8 mb-xl">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-5 z-10 mb-lg lg:mb-0">
+<h1 class="font-headline-xl text-headline-xl mb-md text-on-background">Spaces That Live</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md italic">
+                        A collection of homes, rooms, and corners we've had the privilege to bring to life.
+                    </p>
+</div>
+<div class="col-span-12 lg:col-span-7 grid grid-cols-3 grid-rows-2 gap-4 h-[500px]">
+<div class="col-span-2 row-span-2 relative overflow-hidden rounded-lg bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Sophisticated living room with linen sofa, organic wooden coffee table, and soft warm sunlight filtering through sheer curtains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSHXXkTjOt5l1299mbbbdjVsTkZPGlP12WohQFZzZ2NjeLDfG0-lCrSU5yKiFcHXfoXcw-oqxZcqff8TAeTL5NWLY_yHv85m1URKIa8-Egl1eq8uTg7kv8aGoN2jQqc46yWJGGZuKdOlr86NKsBobadaICrmFijvuERdu1eW-ekQx0ymBf3WugRLhd48U53J5IGUGIxjgd_JrEBrHNdxOyUfYEGk5D1W9KdvbiVoyg9SbBgLldepnbILZMxQ58fkBpIFRqDznC3w"/>
+</div>
+<div class="relative overflow-hidden rounded-lg bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close-up of a handmade ceramic vase on a plaster pedestal with a single dried botanical branch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBVkvo0-EkI8xtdLl1jDK4zt35xTdn3X9KaBi8YDTmja2r9-ufEzeE7vuVxRkaLqslFNFSpPths87-D3AWGkufgcj4MVGEd1QoUTzswRG-tivZiqDLBXv32kvqn71dR64UU9PqXo-Mp3q0eMa39pP7TJXDy4yEpOwF8A4g085rl0cJQFn6QvtEiTI36A59X2iIPYCEGNO0YnmPvH47eW9oARaNa8R89ldDHVZ8dholmSkuKMKfOkgq6mI2Cfomum_-77BW-b2Kpg"/>
+</div>
+<div class="relative overflow-hidden rounded-lg bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Detail of a woven linen textile with rich texture and earth-toned threads in soft focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCTe96xRPOq_LxQTiHzzW68t-LjS3f-qg9YY47H_NwAYVG5FOdri5BJGMM1aMS0RgRzwsUfyBp8ijo9rXBUSWjJydtRDfeSQeLTWb8pNLuw8J_5D_23myc31xJEJywyYcl8AneYbhmveaxvGYvVxsgx-r8rbVwauWm4wt5qjo0BhOi7zNlmdemL5KeW77p94tdp0vccwxyhkhlPn2XO328QpBItUfVOYaQVuBtKA2G39LUloZVXNVSe4JVgZpHX50DmCCqKGai1g"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Filter Navigation -->
+<section class="max-w-[1200px] mx-auto px-8 mb-lg">
+<div class="flex flex-wrap gap-8 items-center border-b border-outline-variant pb-base">
+<a class="font-label-sm text-label-sm text-primary uppercase tracking-widest border-b-2 border-primary pb-base -mb-[10px]" href="#">All</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors pb-base" href="#">Homes</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors pb-base" href="#">Apartments</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors pb-base" href="#">Single Rooms</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest hover:text-primary transition-colors pb-base" href="#">Commercial</a>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="max-w-[1200px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-xl gap-x-lg">
+<!-- Card 1 -->
+<div class="card-hover-effect group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/5] rounded-lg mb-md bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="Luxury modern kitchen with dark oak cabinetry, marble island, and soft ambient lighting in a serene home setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwy7Mdvpbi0pHUmCw3iyFauipjYbw-QijlT95szC2-J5-Yos2fDpgpaj-VqRzxY4MkOEMxh70cvNsstmN-zUGSa7EUwFjj7N6mjH1R60-DmkidFiCq5xBv06dJxPb_3FY-HTqzL46vkBbM4ZIAxYHJ-IbWQP2nciHzfgBK-DUOvGV_mRWi5VmfBHK5pLAx9q8bXzD1kt96S2bru4P94qEKSBztaI64TWQuHLW35JMi6k_rNjr1N_o3UMsmqNYwJnK_80w0u5mGSQ"/>
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+<div class="texture-reveal absolute inset-0 texture-overlay opacity-0 transition-opacity duration-700"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs">Oak &amp; Marrow</h3>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-xs">Hampstead, London</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Where solid history meets the breath of modern morning.</p>
+</div>
+<span class="material-symbols-outlined text-primary mt-2">arrow_outward</span>
+</div>
+</div>
+<!-- Card 2 (Asymmetric Offset) -->
+<div class="card-hover-effect group cursor-pointer md:mt-xl">
+<div class="relative overflow-hidden aspect-[4/5] rounded-lg mb-md bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="Minimalist bedroom with layered neutral bedding, plaster walls, and a large window overlooking a misty garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPlgwweC3dhOcNy7Yn72Ha0Xxn5ezNFMWNCtFpFI2b9-UJo2jlC4gp8mbW1Yx-5xMUaC9ChsB8O6HzzmqyoOYHFaEBxlhPYdzt0T-pNqiGZwxp3drmz4SmjM-sZmYkHwThIcXailAVITKuk8csyFj4EohvjlQagtMjF7yCi898noYNkhe9J-bTOAS-uTGxMOGGGcjAeIkdO3esy1OiCNR4u2evpZ5gmsynZeWnWC6dMIF7fxAtDkOEWf-c0JPmJumFREVXyOc8rg"/>
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+<div class="texture-reveal absolute inset-0 texture-overlay opacity-0 transition-opacity duration-700"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs">Linen Retreat</h3>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-xs">Hudson Valley, NY</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">A sanctuary built of silence and soft-spun fibers.</p>
+</div>
+<span class="material-symbols-outlined text-primary mt-2">arrow_outward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="card-hover-effect group cursor-pointer">
+<div class="relative overflow-hidden aspect-[4/5] rounded-lg mb-md bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="Elegant dining area with vintage mid-century furniture, warm terracotta walls, and artisan pottery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtn3bbzP1LD9NA0Ho7Vb49y2VXc67G90FibPvHg6hR2m5MWkw8-xONHsuIMu0Y6EjuD-qSkehPuUROOtsk6b1Q9yUztY60gWAaPnX1fw54RvON_enKsKiGgiPjRPZ8Zj_knNT0sOpzibjwpEJb2BBhGiQBBAs_rOmmdnxaU_du6RpIuiHw0J7sgRZCNHXWbTyfjuFCM63_eQqM4pjTQi5VVO8Z5gBDhH_kBuYNoDEq5UD-uYfIt1gjCOcHlRanw8vZ005Rac94rg"/>
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+<div class="texture-reveal absolute inset-0 texture-overlay opacity-0 transition-opacity duration-700"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs">Terracotta Tides</h3>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-xs">Majorca, Spain</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Earth-born pigments reflecting the warmth of a setting sun.</p>
+</div>
+<span class="material-symbols-outlined text-primary mt-2">arrow_outward</span>
+</div>
+</div>
+<!-- Card 4 (Asymmetric Offset) -->
+<div class="card-hover-effect group cursor-pointer md:mt-xl">
+<div class="relative overflow-hidden aspect-[4/5] rounded-lg mb-md bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-1000 ease-out" data-alt="Modern home office with a dark wood desk, library wall, and leather armchair in a rich forest green palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATYirm2vMd80tEFrliUNd2CzMbZRVk28aaJGlNyxPbk_XBtasV3r5KtkU1cicZnGulyvliMj3jw9h5RE84_XdiBKHA7Ay9SUABGUrvZ9Y_EoPpfhglSPf-XvAY-V5j_u-UJ2qktC4MPT9ooK2Q0d6Njkgsi1UmDrCQb2dSf0jtO1wu0Eq6rSg83bJYNE0HSw6zepWlYB2RvYzbeLMhsnIlp8cOfzjL4ce21WqVnFVhxU3kpN5WD2mcZOmn2l0ZfcIY5oWYpsVozQ"/>
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity duration-700"></div>
+<div class="texture-reveal absolute inset-0 texture-overlay opacity-0 transition-opacity duration-700"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-xs">The Curated Study</h3>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-xs">Kyoto, Japan</p>
+<p class="font-body-md text-body-md text-on-surface-variant italic">Precision and heritage woven into a space for focus.</p>
+</div>
+<span class="material-symbols-outlined text-primary mt-2">arrow_outward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-[1200px] mx-auto px-8 mt-xl text-center py-xl bg-surface-container-low rounded-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 botanical-float opacity-20 hidden lg:block">
+<span class="material-symbols-outlined text-primary scale-[5]">eco</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-md">Have a Space in Mind?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-lg mx-auto">Let's craft an environment that speaks your language and honors your journey.</p>
+<button class="bg-[#C75B3A] text-on-primary px-10 py-4 font-serif text-base uppercase tracking-widest hover:opacity-90 transition-all duration-500">Inquire About Your Project</button>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1200px] mx-auto px-8">
+<div class="col-span-1 md:col-span-1">
+<div class="font-serif text-2xl tracking-widest text-stone-800 dark:text-stone-200 mb-4">ANTAH</div>
+<p class="font-serif italic text-base text-stone-600 dark:text-stone-400">© 2024 ANTAH Interior Design. Lived-In Luxury.</p>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Explore</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Journal</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Contact</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Press</a></li>
+<li><a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Inquiry</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary mb-6">Social</h4>
+<div class="flex space-x-4">
+<a class="text-stone-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-stone-600 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">pin_drop</span></a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

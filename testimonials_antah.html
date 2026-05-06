@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1d1c17",
+                    "outline": "#8a726b",
+                    "on-tertiary-fixed": "#251a00",
+                    "secondary-container": "#c9ead9",
+                    "on-primary-fixed": "#3a0a00",
+                    "tertiary-fixed": "#ffdf95",
+                    "surface-tint": "#a13f20",
+                    "on-secondary-fixed": "#022016",
+                    "tertiary": "#72590e",
+                    "surface-variant": "#e7e2da",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#476558",
+                    "surface-container-high": "#ece8e0",
+                    "secondary-fixed-dim": "#adcebe",
+                    "background": "#fef9f1",
+                    "surface-container": "#f2ede5",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#be5434",
+                    "primary": "#9e3d1e",
+                    "on-secondary-fixed-variant": "#304d40",
+                    "outline-variant": "#ddc0b8",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f5f0e8",
+                    "tertiary-container": "#8d7127",
+                    "surface": "#fef9f1",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#81280b",
+                    "inverse-primary": "#ffb59f",
+                    "surface-bright": "#fef9f1",
+                    "inverse-surface": "#32302b",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-low": "#f8f3eb",
+                    "secondary-fixed": "#c9ead9",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#e5c370",
+                    "on-surface": "#1d1c17",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#fffbff",
+                    "surface-dim": "#ded9d2",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d6b5d",
+                    "on-surface-variant": "#57423c",
+                    "surface-container-highest": "#e7e2da",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffb59f",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Noto Serif"],
+                    "headline-xl": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAYW_PM-5Vl47dXLKIsaYt6qMxLoV8Vt6gUrOD1xtG10x5u0t6IQtBOfN-GQe718V9AP23oP040WgmYnBNFtxHUwycI4LzCZQ8o7aqMuwTxM3x6PMr8GlUkl2QWc77IbImdLQBK6zInlfjBRLwYCp4z-6w_kpEj5vRh_Mt4X_S0x4o8T9MxSYxDvCLbpEBo4J3wYG8PsRt9fPyjP03uCMAK14EO7yoa840HPbr9y5cIrJul5NUJW7dExWWhxhy67K-KauZS8xJNFA);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.botanical-float {
+    filter: grayscale(0.2) opacity(0.6)
+    }
+.testimonial-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease
+    }
+.testimonial-card:hover {
+    transform: translatey(-4px)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<!-- TopAppBar Shell -->
+<nav class="bg-[#FDFCF8]/90 backdrop-blur-md dark:bg-stone-950/90 docked full-width top-0 z-50 border-b border-stone-200/50 dark:border-stone-800/50">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1200px] mx-auto">
+<div class="font-serif text-3xl font-light tracking-[0.2em] text-stone-800 dark:text-stone-100">ANTAH</div>
+<div class="hidden md:flex items-center gap-xl font-serif tracking-tight text-sm uppercase">
+<a class="font-headline-md text-headline-md text-[#C75B3A] border-b border-[#C75B3A]/30 pb-1" href="home_antah.html">Home</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="journal_antah.html">About</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="services_antah.html">Services</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="portfolio_antah.html">Portfolio</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="contact_antah.html">Contact</a>
+</div>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center pt-xl">
+<div class="max-w-[1200px] mx-auto px-8 w-full grid md:grid-cols-2 gap-lg items-center">
+<div class="z-10 order-2 md:order-1">
+<span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-md block">Testimonials</span>
+<h1 class="font-headline-xl text-on-background mb-md">Kind Words</h1>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                        The best part of what we do? Hearing how it feels to finally come home.
+                    </p>
+</div>
+<div class="relative order-1 md:order-2">
+<div class="aspect-[4/5] overflow-hidden rounded-xl shadow-xl">
+<img class="w-full h-full object-cover" data-alt="A warm candid lifestyle photo of a couple laughing in a sunlit modern organic living room with earthy tones and natural wood elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcjp7ct5OMezkxpJpYTbD7JJMOCqsHQKQcmtcSFh9qme5W2_MVZKaMlyrcI64U9rDuGCnh5720L4e5IPfE6WP6lGa1bRyXxtjWK4oE8zqWo1AdmkR2K92SrSXSNYnwRhOQ_aRwaVgkhwAHAydOqtqAnB0SfI7e2HMx1m-wV25o3taA25ggJQj92WjmiKZqvCsZhBKtTEjLWD3Jmmp2-aAviJyTOe3IJxxadyNX0hfbFMUKWfAafYC_4HchDEGMsfyac0GScfpY4g"/>
+</div>
+<!-- Botanical Accent -->
+<div class="absolute -bottom-lg -right-md botanical-float hidden lg:block">
+<img class="w-48 h-auto rotate-12" data-alt="Delicate hand-drawn botanical branch illustration with soft green leaves on a transparent background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtYqUhfia-fxcGtzHBbWnE3J53mVixaoDaUoDpxWAO4wT03hCrXabE5e-GUS88Ipu8OGS0P9uabKoNGe1bXSrQoRO5wcW-AAjAXfKiyFJ6BqddeOsaB7Unn1GDVRfxWXfevYf7FzC_FQaZhUggm6da7EL_3Sg8R2WtALPfz8TjyrAYI7nFf84jme6SJpNu_pojJcy6Lm6IDy8NqaN1pfdeUU7I5v4I0ReviK2CdTvw7i_ioqe3GBmEdEFCn8etYew0WzLbXrt9Pw"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Grid -->
+<section class="max-w-[1200px] mx-auto px-8 py-xl relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Quote 1: Large Asymmetric Block -->
+<div class="md:col-span-7 bg-surface-container-low p-lg rounded-xl testimonial-card border border-outline-variant/20">
+<div class="flex items-center gap-md mb-lg">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="format_quote">format_quote</span>
+</div>
+<blockquote class="font-headline-md italic text-on-surface-variant mb-xl leading-relaxed">
+                        "ANTAH didn't just design a house; they curated a feeling. Every time I walk through the door, there's a sense of immediate calm. The materials they chose—the raw linen and the hand-finished oak—feel like they have stories of their own."
+                    </blockquote>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-headline-md text-on-background">Eleanor Vance</p>
+<p class="font-label-sm text-outline uppercase tracking-wider">Cotswolds | The Hearth Project</p>
+</div>
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Portrait of a sophisticated woman in her 40s with a warm smile, natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxNVQssa0qv3AofpIbAWCf4DbHhIRC0N0RrIv17vH7pAsMEm_TC_QZKfBaaztpzuV-U5M5L2qx8UTdBTMp4hqJE3B8sPokgHtb2ppm0fYaGR9Q9HQkw6GhSAzXfZPaO3Evd2zuEzrieuIqZiL1mlwCpK-crNkPh52WN6XcQcd7lBVyutuGOqZ2YIBSRcfgNoTJGljA30Bw2QkEdjGFh5X6bxO56ec5EuKEJVEoyZ1vUGNceSwG7jVhuBEjKn-PVUk6q0YAsyWkJg"/>
+</div>
+</div>
+</div>
+<!-- Quote 2: Image-heavy small block -->
+<div class="md:col-span-5 bg-secondary-container/30 p-md rounded-xl testimonial-card flex flex-col justify-between">
+<div class="aspect-video mb-md rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up of a minimalist study area with a reclaimed wood desk and soft afternoon shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtuFOqTa5pu5LdjJjjZuFMeKaaABd93GXO3Tf2hxNbtwXpyHlFBlr4WEOqrLsC742o4SL6hskhbCRqG4iWrgFStdIySNPnQ_COwTkss3t7-zk7oPI0lSFGgjckaPrrbLC_-6NNF7mibWM5twpjClY9slTC2Fj66R94dsot3-59Ud26FcnMEGKCIa3tfG1LITs5h-C8eYPsGS9f5CIlTcG_wStEvE8z-3KQZTnIB0uXoDGcldOuIWM0AR5ggfcGFV9TTh5CMFiNog"/>
+</div>
+<div>
+<blockquote class="font-body-lg italic text-on-secondary-container mb-md">
+                            "The attention to detail is staggering. It's the small things, like the way the morning light hits the plaster walls, that make this space so special."
+                        </blockquote>
+<p class="font-headline-md text-sm text-on-secondary-container">Julian Thorne</p>
+<p class="font-label-sm text-on-secondary-container/70 uppercase">London | Minimalist Study</p>
+</div>
+</div>
+<!-- Quote 3: Full Width with Texture Background -->
+<div class="md:col-span-12 relative overflow-hidden rounded-xl bg-surface-variant p-lg flex flex-col md:flex-row gap-lg items-center mt-md">
+<div class="md:w-1/3">
+<img class="rounded-lg shadow-lg" data-alt="A serene bathroom with a stone soaking tub and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5-ZP119CjINI1_Udwrr2VX1NG5aJedGUM7GkmGPOSYBDL0FxqhSRLYuGYyD_saOjPVkJwP7y4YXfqnPGN1FKI29b7fijS_1xP6g_rG2m9ZZJUe0OeMmzVAojCZ_xCuLJrFkTQQqoClMMP04O9IoJLbucOuMTd6UNetbvhUyTMFSPpbOwbAyI1e0ZZv59mWcB8545vJ34w_8XML-jnbB_oN9QrIX7DjCRuW-zmGOGc0CBIct7l2V5wutpWnBjwrcHBd1g93OwXA"/>
+</div>
+<div class="md:w-2/3">
+<span class="material-symbols-outlined text-outline text-3xl mb-base" data-icon="star" data-weight="fill">star</span>
+<blockquote class="font-headline-lg italic text-on-surface mb-lg">
+                            "They listened not just to what I wanted my home to look like, but how I wanted to live in it. It's a sanctuary for my children and a masterpiece for my guests."
+                        </blockquote>
+<div>
+<p class="font-headline-md text-on-background">The Sterling Family</p>
+<p class="font-label-sm text-outline uppercase tracking-wider">San Francisco | Pacific Heights Home</p>
+</div>
+</div>
+</div>
+<!-- Quote 4: Sage Minimalist -->
+<div class="md:col-span-6 bg-surface-container-high p-lg rounded-xl testimonial-card">
+<blockquote class="font-body-lg italic text-on-surface-variant mb-lg">
+                        "Earthy, grounded, and undeniably luxurious. ANTAH has a way of making high-end design feel approachable and soulful."
+                    </blockquote>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-on-secondary font-serif">MB</div>
+<div>
+<p class="font-body-md font-bold text-on-background">Marcus Bennett</p>
+<p class="font-label-sm text-outline">NYC | The Loft Project</p>
+</div>
+</div>
+</div>
+<!-- Quote 5: Terracotta Accent -->
+<div class="md:col-span-6 bg-primary-container/10 border border-primary/10 p-lg rounded-xl testimonial-card">
+<blockquote class="font-body-lg italic text-primary-container mb-lg">
+                        "I finally feel at home. It sounds simple, but it took the vision of the ANTAH team to make it a reality. Truly lived-in luxury."
+                    </blockquote>
+<div>
+<p class="font-body-md font-bold text-on-background">Sarah J. Jenkins</p>
+<p class="font-label-sm text-outline uppercase">Austin | Hill Country Estate</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-surface-container-highest py-xl mt-xl relative">
+<div class="max-w-[800px] mx-auto px-8 text-center">
+<h2 class="font-headline-xl text-on-background mb-md">Your Story Could Be Here</h2>
+<p class="font-body-lg text-on-surface-variant mb-lg">
+                    Every space we design begins with a conversation about how you want to feel. Let's start ours today.
+                </p>
+<button class="bg-primary text-on-primary px-lg py-md rounded-full font-label-sm uppercase tracking-[0.2em] hover:bg-on-primary-fixed-variant transition-all duration-500 shadow-lg active:scale-95">
+                    Start a Conversation
+                </button>
+</div>
+<!-- Decorative botanical -->
+<div class="absolute top-0 left-0 botanical-float p-md opacity-20">
+<img class="w-32 h-auto -rotate-45" data-alt="Close up of a single eucalyptus leaf with subtle texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx_OzpAbEV0uP8rJOKEvpjgdJpVikyNn-QmEE3Y5dKfNuAgpJawMWprKWeJyUGCOLyQtx1euh-KREKX16x6ofRwgxDfIm6jQpjn5MIFByOOyXR1V4JxnxwSspikBBa38MxCCrurAHyTtYAIX_uPGQ5ei52ORSkXeTLKqURrvmTWJKWlvt7cEoEdBUZQltXqOTDSdVTOesGpR9hvZFFfGZT1oFGWrCcI-DK5h2N4MB12-gTm7kH9SQ1fnRyjKp3oKn3hNWC69qjnA"/>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-stone-100 dark:bg-stone-900 border-t border-stone-200 dark:border-stone-800 py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1200px] mx-auto px-8">
+<div class="md:col-span-1">
+<div class="font-serif text-2xl tracking-widest text-stone-800 dark:text-stone-200 mb-base">ANTAH</div>
+<p class="font-serif italic text-base text-stone-600 dark:text-stone-400">© 2024 ANTAH Interior Design. Lived-In Luxury.</p>
+</div>
+<div>
+<h4 class="font-label-sm uppercase tracking-widest text-primary mb-md">Links</h4>
+<div class="flex flex-col gap-sm font-serif italic text-base">
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Journal</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Careers</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Press</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500" href="#">Inquiry</a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-sm uppercase tracking-widest text-primary mb-md">Newsletter</h4>
+<p class="text-stone-500 mb-md font-serif italic">Soft reflections and design notes delivered to your inbox.</p>
+<form class="flex gap-xs">
+<input class="bg-transparent border-b border-stone-300 focus:border-primary outline-none py-xs w-full font-serif italic" placeholder="email address" type="email"/>
+<button class="text-primary hover:text-stone-900 transition-colors" type="submit">
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+</div>
+</div>
+</footer>
+</body></html>

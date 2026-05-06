@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#1d1c17",
+                    "outline": "#8a726b",
+                    "on-tertiary-fixed": "#251a00",
+                    "secondary-container": "#c9ead9",
+                    "on-primary-fixed": "#3a0a00",
+                    "tertiary-fixed": "#ffdf95",
+                    "surface-tint": "#a13f20",
+                    "on-secondary-fixed": "#022016",
+                    "tertiary": "#72590e",
+                    "surface-variant": "#e7e2da",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#476558",
+                    "surface-container-high": "#ece8e0",
+                    "secondary-fixed-dim": "#adcebe",
+                    "background": "#fef9f1",
+                    "surface-container": "#f2ede5",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#be5434",
+                    "primary": "#9e3d1e",
+                    "on-secondary-fixed-variant": "#304d40",
+                    "outline-variant": "#ddc0b8",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f5f0e8",
+                    "tertiary-container": "#8d7127",
+                    "surface": "#fef9f1",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed-variant": "#81280b",
+                    "inverse-primary": "#ffb59f",
+                    "surface-bright": "#fef9f1",
+                    "inverse-surface": "#32302b",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-low": "#f8f3eb",
+                    "secondary-fixed": "#c9ead9",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary-fixed-dim": "#e5c370",
+                    "on-surface": "#1d1c17",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#fffbff",
+                    "surface-dim": "#ded9d2",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#4d6b5d",
+                    "on-surface-variant": "#57423c",
+                    "surface-container-highest": "#e7e2da",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffb59f",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "lg": "48px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Noto Serif"],
+                    "headline-xl": ["Noto Serif"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBkuQzjoVhkKAhA7SZrdld_7q5xHnti2VHHt1ocvfaHhk6_sbM1g-echJ--jRopzDWzyhEwIh7L1B0QYDDJoBNFT6M3-rriUUhe0gq5g6WDXV2Hd_b5mWxN-MTaidZdeIADScvVd0prgljj1M8orlUDgBL3bsne6Q-K2wH12tEymlrEYlWYS5qGeABfeaQtxpisS3ksUWcHMCq8b9ez7WRbvSsuZ-Mmu6FU0TvC4qRLVralgvsJkOYAz4EXqmkEGAxpnuVeUBqlIA);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.botanical-accent {
+    filter: grayscale(0.4) opacity(0.6)
+    }
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-bottom-color: #be5434 !important;
+    box-shadow: 0 4px 12px -6px rgba(190, 84, 52, 0.2)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div class="fixed inset-0 grain-overlay z-[60]"></div>
+<!-- Navigation Shell -->
+<header class="bg-[#FDFCF8]/90 backdrop-blur-md dark:bg-stone-950/90 docked full-width top-0 z-50 border-b border-stone-200/50 dark:border-stone-800/50 flat no shadows">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-[1200px] mx-auto">
+<div class="font-serif text-3xl font-light tracking-[0.2em] text-stone-800 dark:text-stone-100">ANTAH</div>
+<div class="hidden md:flex items-center gap-10 font-serif tracking-tight text-sm uppercase">
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="home_antah.html">Home</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="journal_antah.html">About</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="services_antah.html">Services</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="portfolio_antah.html">Portfolio</a>
+<a class="font-headline-md text-headline-md text-[#C75B3A] border-b border-[#C75B3A]/30 pb-1" href="contact_antah.html">Contact</a>
+</div>
+</nav>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[716px] flex flex-col md:flex-row items-center overflow-hidden">
+<div class="w-full md:w-1/2 h-[512px] md:h-[716px] relative">
+<img alt="Design Studio" class="w-full h-full object-cover grayscale-[0.2]" data-alt="Detail shot of a minimalist interior design studio with high ceilings, large windows, oak tables, and architectural samples in warm natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDphyk2YKPLEw2DLckvGulIvYUAUDxzlhW30tdx31QHJwaCw7mtjM0EORs94PRTbjkhG9hwNqx5u2wSNo_o0jHJ4FyNJuE0ZNBlWP1bnijOvKPm4OLxNxcJxv4PQuWcBwdkOLxmdEPatZY3CIVh3_ziNXTKXtBRCx0DYGaMPAB2uHEOF2MncvhktcmxgoEbbyantu-L7i4d2YW9ED5Eh61O727f1LDsj3Ry2W0w7Q34cic4ci7NbUYqgLOc5TE69TVqNe1nmKvHaQ"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="w-full md:w-1/2 p-8 md:p-20 flex flex-col justify-center items-start bg-surface-container-low relative z-10 -mt-20 md:mt-0 md:-ml-20 max-w-2xl">
+<span class="font-label-sm text-primary uppercase tracking-[0.3em] mb-4">Get in touch</span>
+<h1 class="font-headline-xl text-on-background mb-6">Let's Begin</h1>
+<p class="font-body-lg text-on-surface-variant leading-relaxed italic">
+                    Whether you have a clear vision or just a feeling you can't quite name — we're here to listen.
+                </p>
+<div class="absolute -right-16 -bottom-16 w-64 h-64 botanical-accent opacity-20 pointer-events-none hidden lg:block">
+<span class="material-symbols-outlined text-[160px] text-secondary">eco</span>
+</div>
+</div>
+</section>
+<!-- Main Content Area -->
+<section class="max-w-[1200px] mx-auto px-8 py-24 grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Contact Details -->
+<div class="lg:col-span-4 space-y-16">
+<!-- Alternative Contact -->
+<div class="space-y-6">
+<h3 class="font-headline-md border-b border-outline-variant pb-4">Direct Lines</h3>
+<div class="space-y-4">
+<div class="group cursor-pointer">
+<span class="font-label-sm text-outline block uppercase tracking-widest mb-1">Email</span>
+<a class="font-body-lg text-on-surface hover:text-primary transition-colors" href="mailto:hello@antahdesign.com">antah@gmail.com</a>
+</div>
+<div class="group cursor-pointer">
+<span class="font-label-sm text-outline block uppercase tracking-widest mb-1">Phone</span>
+<a class="font-body-lg text-on-surface hover:text-primary transition-colors" href="tel:+1234567890">+91 6302458896</a>
+</div>
+</div>
+</div>
+<!-- Studio Address -->
+<div class="space-y-6">
+<h3 class="font-headline-md border-b border-outline-variant pb-4">The Studio</h3>
+<div class="space-y-4">
+<p class="font-body-md text-on-surface-variant leading-loose">
+                            Karanbagh, saidabad<br/>
+                            Hyderabad, Telangana, India <br/>
+                        </p>
+<a class="inline-flex items-center gap-2 font-label-sm text-primary hover:underline underline-offset-8 transition-all" href="#">
+                            VIEW ON MAP 
+                            <span class="material-symbols-outlined text-[16px]">north_east</span>
+</a>
+<div class="mt-4 rounded-lg overflow-hidden h-48 grayscale brightness-95 contrast-125 border border-outline-variant">
+<img alt="Map View" class="w-full h-full object-cover" data-alt="Abstract aerial view of a clean minimalist city map showing elegant blocks and streets in beige and charcoal tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQdotRM_WNNOrMrevDV4NPhuU__YABiyfDMkWP43tzFSGNlh6jhPvNPeTPLJozdEgPEhcNHFtZwXuAGz0aFDv7S-TOMIoWBv190ulfoGWwZeTwTd6Jboj75e_KWCqKFWt5vZhOhzQPY44Ule8FwIPGkRtY1pTtoT7k6KJzvuhp1UHrd1n3RJoj-fPgLp5DZOfEv4pV_3TtzpI_qcmmQMgfAsn6ZmesgHJ7iSsyNdK66qJNQuHx4fh8LwRBi4UN-qjCmcNfkIpk_w"/>
+</div>
+</div>
+</div>
+<!-- Social Links -->
+<div class="space-y-6">
+<h3 class="font-label-sm text-outline uppercase tracking-widest">Connect With Us</h3>
+<div class="flex gap-6">
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Right Column: Inquiry Form -->
+<div class="lg:col-span-8 bg-surface-container-low p-8 md:p-16 rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[200px] text-primary">edit_note</span>
+</div>
+<h2 class="font-headline-lg mb-10 text-on-surface">New Project Inquiry</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="flex flex-col space-y-2">
+<label class="font-label-sm text-outline uppercase">Name</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all" placeholder="E.g. Julian Thorne" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-sm text-outline uppercase">Email</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all" placeholder="hello@domain.com" type="email"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-sm text-outline uppercase">Phone</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all" placeholder="+1 (000) 000-0000" type="tel"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-sm text-outline uppercase">Location</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all" placeholder="City, State" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-sm text-outline uppercase">Project Type</label>
+<select class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all appearance-none cursor-pointer">
+<option>Full Residential Design</option>
+<option>Commercial Space</option>
+<option>Kitchen &amp; Bath Remodel</option>
+<option>Styling &amp; Furniture Curation</option>
+</select>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-sm text-outline uppercase">Estimated Budget</label>
+<select class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all appearance-none cursor-pointer">
+<option>$50k - $100k</option>
+<option>$100k - $250k</option>
+<option>$250k - $500k</option>
+<option>$500k +</option>
+</select>
+</div>
+<div class="flex flex-col md:col-span-2 space-y-2">
+<label class="font-label-sm text-outline uppercase">Message</label>
+<textarea class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-3 font-body-md focus:border-primary transition-all resize-none" placeholder="Tell us about your space and your vision..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-6">
+<button class="w-full md:w-auto bg-primary text-white px-12 py-5 rounded-lg font-label-sm uppercase tracking-[0.2em] hover:bg-primary-container transition-all shadow-lg shadow-primary/10" type="submit">
+                            Send Inquiry
+                        </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Botanical Accent Piece -->
+<div class="absolute left-0 bottom-0 pointer-events-none opacity-5 translate-y-1/2 -translate-x-1/2">
+<span class="material-symbols-outlined text-[600px] text-tertiary">potted_plant</span>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-stone-100 dark:bg-stone-900 full-width py-20 border-t border-stone-200 dark:border-stone-800 flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1200px] mx-auto px-8">
+<div class="md:col-span-1">
+<div class="font-serif text-2xl tracking-widest text-stone-800 dark:text-stone-200 mb-6">ANTAH</div>
+<p class="font-serif italic text-base text-stone-600 dark:text-stone-400">© 2024 ANTAH Interior Design. Lived-In Luxury.</p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-[#C75B3A] dark:text-orange-400 uppercase tracking-widest mb-2">Studio</span>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500 font-serif italic" href="#">Journal</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500 font-serif italic" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-[#C75B3A] dark:text-orange-400 uppercase tracking-widest mb-2">Support</span>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white underline underline-offset-4 transition-all duration-500 font-serif italic" href="#">Press</a>
+<a class="text-[#C75B3A] underline underline-offset-8 font-serif italic" href="#">Inquiry</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-[#C75B3A] dark:text-orange-400 uppercase tracking-widest mb-2">Newsletter</span>
+<p class="font-serif italic text-sm text-stone-500 mb-2">Subscribe for curated inspiration.</p>
+<div class="flex border-b border-outline-variant py-2">
+<input class="bg-transparent border-none p-0 text-sm focus:ring-0 w-full italic" placeholder="Email Address" type="email"/>
+<button class="text-[#C75B3A]"><span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

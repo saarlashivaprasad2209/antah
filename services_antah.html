@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#3a0a00",
+                    "primary-fixed-dim": "#ffb59f",
+                    "on-primary-container": "#fffbff",
+                    "inverse-on-surface": "#f5f0e8",
+                    "on-secondary-fixed": "#022016",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-variant": "#e7e2da",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e7e2da",
+                    "tertiary-container": "#8d7127",
+                    "primary-fixed": "#ffdbd1",
+                    "tertiary-fixed-dim": "#e5c370",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1d1c17",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdf95",
+                    "secondary": "#476558",
+                    "inverse-surface": "#32302b",
+                    "secondary-container": "#c9ead9",
+                    "primary": "#9e3d1e",
+                    "on-secondary-container": "#4d6b5d",
+                    "on-tertiary-fixed": "#251a00",
+                    "primary-container": "#be5434",
+                    "surface": "#fef9f1",
+                    "inverse-primary": "#ffb59f",
+                    "secondary-fixed-dim": "#adcebe",
+                    "background": "#fef9f1",
+                    "surface-tint": "#a13f20",
+                    "surface-container": "#f2ede5",
+                    "outline-variant": "#ddc0b8",
+                    "on-surface-variant": "#57423c",
+                    "tertiary": "#72590e",
+                    "surface-container-low": "#f8f3eb",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#ece8e0",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#304d40",
+                    "outline": "#8a726b",
+                    "error": "#ba1a1a",
+                    "on-background": "#1d1c17"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "headline-lg": ["Noto Serif"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Noto Serif"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.grain-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDM0UHCyV7wxrx8pJ-E3gAapf9dk3SheqsD1PpSwNZgl4QxOB785n_pMhnnXaJZWvjRUzedHXgMSCCUvFYZF90PlPVJyYAIxo-kvtJ8OBeYXzorhET5cG62rr8u5s3gKNaowJg5aI_3YDbRhDPQNSOEYfn7ElXYn37BbFaYU09NTfh0LFRwp-gJs3whQs3tMcQA5bq9luXJQ5OjdEKcmwyDk1MuN7ds5UX1kTMjzIrp7sVlA3c4ueW1hCIUC4V0B3SKbchlPHjdXg);
+    opacity: 0.03;
+    pointer-events: none
+    }
+.botanical-float {
+    filter: opacity(0.15) sepia(0.2)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container">
+<div class="fixed inset-0 grain-overlay z-50"></div>
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#FDFBF7] dark:bg-stone-950/95 backdrop-blur-sm border-b border-stone-200/40 dark:border-stone-800/40 shadow-sm shadow-stone-200/50 dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 md:px-12 h-24">
+<div class="text-2xl font-serif tracking-[0.3em] text-stone-900 dark:text-stone-50 uppercase">ANTAH</div>
+<div class="hidden md:flex gap-x-12 items-center">
+<a class="text-stone-500 dark:text-stone-400 font-serif hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-500" href="home_antah.html">Home</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-500" href="journal_antah.html">About</a>
+<a class="text-[#C75B3A] dark:text-orange-300 border-b border-[#C75B3A]/30 pb-1 transition-colors duration-500" href="services_antah.html">Services</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-500" href="portfolio_antah.html">Portfolio</a>
+<a class="text-stone-500 dark:text-stone-400 font-serif hover:text-stone-800 dark:hover:text-stone-200 transition-colors duration-500" href="contact_antah.html">Contact</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface cursor-pointer">menu</span>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-32 pb-xl px-margin overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6 relative z-10">
+<span class="font-label-sm text-secondary uppercase tracking-[.25em] mb-4 block">Our Philosophy</span>
+<h1 class="font-headline-xl text-on-surface mb-md">How We Work</h1>
+<p class="font-body-lg text-on-surface-variant max-w-lg mb-lg">
+                    We believe interior design is more than aesthetics; it's a sensory translation of your personal narrative into a living, breathing space.
+                </p>
+<a class="flex items-center gap-base text-primary hover:opacity-80 transition-opacity" href="{{DATA:SCREEN:SCREEN_10}}">
+<span class="material-symbols-outlined">arrow_downward</span>
+<span class="font-label-sm uppercase tracking-widest">Explore Services</span>
+</a>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="aspect-[4/5] bg-surface-container relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="overhead close-up of hands arranging linen fabric swatches, wood samples, and a ceramic tile on a neutral moodboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUaCgqdYB3eG7cWirXWw9qPqMRhcRLeXyBXhcNHp1isrvzOLj0EQNBcNG_MkOjQoJsvxZYWl3UQUdFYfERge-Fkccps15cIKI5zRNsfgvhqhGkihSMnqKkoE7-HOGsCn_euPservAGepR66by3o1ZrvP5AsyR1qCLY8CCnfByqAJWm5fOUrZwEC5QUFrpWY4TI_TN_kALeo-AFCtEwwtUTu1Kf2RvZXzsPwqZ43lYu4boRy0_eLc_Fm7jNZeCwKmIdUApppEAZMw"/>
+</div>
+<!-- Botanical Accent -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 botanical-float hidden lg:block">
+<span class="material-symbols-outlined text-[160px] text-secondary/30">eco</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Service Overview Section -->
+<section class="py-xl bg-surface-container-low px-margin">
+<div class="max-w-7xl mx-auto">
+<div class="mb-xl text-center max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-on-surface mb-base">Tailored Offerings</h2>
+<div class="w-16 h-[1px] bg-outline mx-auto mb-md"></div>
+<p class="font-body-md text-on-surface-variant">From single room refreshes to comprehensive architectural transformations, our services are grounded in intentionality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<!-- Service 1 -->
+<div class="group cursor-default">
+<div class="aspect-video mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="a minimalist luxury living room with floor-to-ceiling windows, warm wood ceilings, and soft beige seating" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB48zpGwuywVgrSFhuBi2EV1m3UtKNMVrkeh1nAy2aUCqa1WcRa_vgSEudFaEo_AmqGyJnFAO1D15sNlIr-dijy7FN5N4JVla9Kd6bLOOYoKflu6xccQ1pcfzPR6fIed0OQCmaoyngxPn-co8xRoXgvxbbxy2DYoHp5xKCxpGMC1-oAewx9uoFtXA0PkwrDoF6h44EiDSUj1SBBjVp_lA27xMBg0S8JPz6E-_pngSY2HWptvgL_II8rfqbY_8XhRLzIUMY69MoRug"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface mb-xs">Full Home Design</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Comprehensive end-to-end management, from conceptual spatial planning to the final curated accessory.</p>
+</div>
+<span class="font-label-sm text-primary py-1 px-2 border border-primary/20">01</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group cursor-default md:mt-24">
+<div class="aspect-video mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="a cozy bedroom corner featuring high-quality linen bedding, a vintage wooden nightstand, and soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_hT0YRsDrvIeVc7ydzeZstiuzuN06FuldceiYt7Z-NhfuumMaJH8RFpUkZ3lqyt7b8xZeHf_jl9F9KPSvvDDfsfYszsa_jBJtH1qgESWYK_zPIwfzhDJ0K7RkN_YEhMgAGz3L2JJYjEggKu_raFvwf1OCl1DtmcZUms__BUjuh1nfPeuQH67lxriOQgRimOJTWGdHObVE5GOg9SPIDCd_LRta--kx5NiECIHtGCCfTSo--BK5HZPqp1Sv6UsFxiGKfUqNXDxb5w"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface mb-xs">Room Refresh</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Transforming a single space through color, texture, and refined furniture selection without structural changes.</p>
+</div>
+<span class="font-label-sm text-primary py-1 px-2 border border-primary/20">02</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group cursor-default">
+<div class="aspect-video mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="architectural blueprints spread across a stone table with a cup of coffee and natural sunlight streaming in" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzLeXnSOue4PQr8hQ5CTR-l82SOmM9YtVzmVGvvvDqKkX-t2xJ5ZW3rCj3Hwqgpef0Hjbo32g-uHYehMI59Y2Kt9lICB4P2YAJEa_F3hXSxVL8JW63_KmrMKVCehivBAP0l3CsFxhO7svJ-qbrRRVdQmI4AuclAzRy2P9ChJEqGO4U8BWxThzogwq5Zo7NbVeHucHI37mu4kEyfjrIMXpAJpfzggl-jMLyI6zBWEzGWoWSP4F2FvQ4Hwp7A7fy6-aaRuRZFdiQzw"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface mb-xs">Design Consultation</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">A focused 2-hour session providing expert guidance on materials, layouts, and sourcing for the self-managed project.</p>
+</div>
+<span class="font-label-sm text-primary py-1 px-2 border border-primary/20">03</span>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group cursor-default md:mt-24">
+<div class="aspect-video mb-md overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" data-alt="close up of a craftsman's hands carving intricate details into a dark walnut wood table leg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ6W1F0f4-ArLOkGaXrgRe5gNuTnsMyJITmLjyUCVgh1XCe1e0HlpJuQSMpPaX8qxk8OzzMQBRp9y2aMXegG_pJ61hLnwX96rwtnwnLfAtJsQUkrlNfQLOyxQ_PtwGlWDukAhTjDY0GT4Nrv6BtGsEoBa0ASEmkQyYWhlcpQU6LbSbMubjsprYcSYe4qXPylh_7cZ6GZr4mxIGQvq_HNM_zA_0EOHZ5yi0WyBJmVYDzJL_kQwlgEqrO1_9ob-jASxyT1e653a4_w"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface mb-xs">Custom Furniture</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">Bespoke commissions designed exclusively for your space, handcrafted by our network of local artisans.</p>
+</div>
+<span class="font-label-sm text-primary py-1 px-2 border border-primary/20">04</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Process Section -->
+<section class="py-xl bg-secondary px-margin relative overflow-hidden">
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div>
+<span class="font-label-sm text-secondary-container uppercase tracking-widest mb-4 block">The Journey</span>
+<h2 class="font-headline-xl text-background">Our Process</h2>
+</div>
+<p class="font-body-md text-secondary-container max-w-sm mb-base">
+                    Five intentional phases designed to ensure clarity, creativity, and a seamless transition to your new environment.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-base">
+<!-- Step 01 -->
+<div class="p-md bg-surface/5 border-l border-surface/20 group hover:bg-surface/10 transition-colors">
+<span class="font-label-sm text-secondary-container mb-base block">01</span>
+<h4 class="font-headline-md text-background mb-sm">Discovery</h4>
+<p class="font-body-md text-secondary-container/80 text-sm">Understanding your lifestyle, sensory preferences, and functional needs.</p>
+</div>
+<!-- Step 02 -->
+<div class="p-md bg-surface/5 border-l border-surface/20 group hover:bg-surface/10 transition-colors">
+<span class="font-label-sm text-secondary-container mb-base block">02</span>
+<h4 class="font-headline-md text-background mb-sm">Concept</h4>
+<p class="font-body-md text-secondary-container/80 text-sm">Translating our findings into moodboards, textures, and color stories.</p>
+</div>
+<!-- Step 03 -->
+<div class="p-md bg-surface/5 border-l border-surface/20 group hover:bg-surface/10 transition-colors">
+<span class="font-label-sm text-secondary-container mb-base block">03</span>
+<h4 class="font-headline-md text-background mb-sm">Development</h4>
+<p class="font-body-md text-secondary-container/80 text-sm">Refining spatial plans, choosing materials, and finalizing 3D visualizations.</p>
+</div>
+<!-- Step 04 -->
+<div class="p-md bg-surface/5 border-l border-surface/20 group hover:bg-surface/10 transition-colors">
+<span class="font-label-sm text-secondary-container mb-base block">04</span>
+<h4 class="font-headline-md text-background mb-sm">Execution</h4>
+<p class="font-body-md text-secondary-container/80 text-sm">Procurement, coordinating trades, and site management for precision.</p>
+</div>
+<!-- Step 05 -->
+<div class="p-md bg-surface/5 border-l border-surface/20 group hover:bg-surface/10 transition-colors">
+<span class="font-label-sm text-secondary-container mb-base block">05</span>
+<h4 class="font-headline-md text-background mb-sm">Reveal</h4>
+<p class="font-body-md text-secondary-container/80 text-sm">The final styling and the moment you step into your completed sanctuary.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Transparency Section -->
+<section class="py-xl px-margin bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+<div class="lg:col-span-5">
+<h2 class="font-headline-lg text-on-surface mb-md">Investment &amp; Value</h2>
+<p class="font-body-md text-on-surface-variant mb-lg">Transparency is the foundation of our partnership. While every project is bespoke, these ranges offer a starting point for your investment planning.</p>
+<div class="space-y-md">
+<div class="border-b border-outline-variant pb-base flex justify-between items-center group">
+<span class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Consultation Session</span>
+</div>
+<div class="border-b border-outline-variant pb-base flex justify-between items-center group">
+<span class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Room Transformation</span>
+</div>
+<div class="border-b border-outline-variant pb-base flex justify-between items-center group">
+<span class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Full Home Management</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-2 gap-md">
+<div class="aspect-[3/4] bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="a minimalist luxury kitchen with dark stone islands and brass fixtures, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr6v9qy_1sRjtyFtT4guyBLvvq4oldMuMwwIkyRp6DZ2jmmTuVKGMsmGDOwmtlM-TxMf6ma5dkzlKURx_YsGx5zuwyjCN6xiz5bdGlisudPKxYMxOq9EdUHLNYvniUb3BF2o42j3xYWrbgtotCsxeOmIxIJb3mhvtL1E4GcD2qIPh7q3l0DNJri98r1ll-M2AuF1QOiopeZQbFgEVVi8u0XWnXVVL9aIRK1zl_ivW99GioT2_FApO9GIVA0OK3Ebcu28KE-xiXCg"/>
+</div>
+<div class="aspect-[3/4] bg-surface-container-high mt-12 relative overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="architectural detail of a minimalist staircase with integrated warm lighting and plaster finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvr5sMy0QmQV4HHyWL9M-apn4k28N36No26j8zjRE8wcqX9jTPTlNc2DeWzQD3mDZ1ies4zA-JisNLI6tLY6A53SFDHCk8HVp0hlEBPZRw-dKZCWgK6FVFqRXEXDFBHS5p26pHDxiH27ajQ8r692NyUC54hLRHiC5fFgntOZjOWP5T2WA3pLcVKhZwt-7NCDhUU8VoZTkU1sGLq4L1a7swEfJpINgU4pHasBVX5MsnJ0f1CgLNCCRKH89d5di-G-ogbifUeURHuA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto items-center">
+<div>
+<div class="text-lg font-serif tracking-widest text-stone-800 dark:text-stone-100 uppercase mb-4">ANTAH</div>
+<p class="font-serif text-sm tracking-wide text-stone-600 dark:text-stone-400">© 2024 ANTAH. Design That Breathes.</p>
+</div>
+<div class="flex flex-wrap gap-x-8 md:justify-end"><a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_9}}">Home</a>
+<a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_5}}">About</a>
+<a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_10}}">Services</a>
+<a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_12}}">Portfolio</a>
+<a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_2}}">Journal</a>
+<a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_4}}">Testimonials</a>
+<a class="text-stone-500 hover:text-stone-800 dark:text-stone-400 dark:hover:text-stone-200 font-serif text-sm tracking-wide transition-opacity duration-300 hover:underline decoration-stone-300 underline-offset-4" href="{{DATA:SCREEN:SCREEN_8}}">Contact</a></div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#3a0a00",
+                    "primary-fixed-dim": "#ffb59f",
+                    "on-primary-container": "#fffbff",
+                    "inverse-on-surface": "#f5f0e8",
+                    "on-secondary-fixed": "#022016",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-variant": "#e7e2da",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e7e2da",
+                    "tertiary-container": "#8d7127",
+                    "primary-fixed": "#ffdbd1",
+                    "tertiary-fixed-dim": "#e5c370",
+                    "on-tertiary-fixed-variant": "#594400",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1d1c17",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#ffdf95",
+                    "secondary": "#476558",
+                    "inverse-surface": "#32302b",
+                    "secondary-container": "#c9ead9",
+                    "primary": "#9e3d1e",
+                    "on-secondary-container": "#4d6b5d",
+                    "on-tertiary-fixed": "#251a00",
+                    "primary-container": "#be5434",
+                    "surface": "#fef9f1",
+                    "inverse-primary": "#ffb59f",
+                    "secondary-fixed-dim": "#adcebe",
+                    "background": "#fef9f1",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#c9ead9",
+                    "on-error": "#ffffff",
+                    "surface-bright": "#fef9f1",
+                    "surface-dim": "#ded9d2",
+                    "on-primary-fixed-variant": "#81280b",
+                    "surface-tint": "#a13f20",
+                    "surface-container": "#f2ede5",
+                    "outline-variant": "#ddc0b8",
+                    "on-surface-variant": "#57423c",
+                    "tertiary": "#72590e",
+                    "surface-container-low": "#f8f3eb",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#ece8e0",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#304d40",
+                    "outline": "#8a726b",
+                    "error": "#ba1a1a",
+                    "on-background": "#1d1c17"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "32px",
+                    "xs": "4px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "md": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "headline-lg": ["Noto Serif"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Noto Serif"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .grain-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .botanical-float {
+            filter: contrast(0.8) sepia(0.2) opacity(0.4);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<!-- Navigation Shell -->
+<header class="bg-[#FDFBF7] dark:bg-stone-950/95 backdrop-blur-sm fixed top-0 w-full z-50 border-b border-stone-200/40 shadow-sm shadow-stone-200/50">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 md:px-12 h-24">
+<div class="text-2xl font-serif tracking-[0.3em] text-stone-900 uppercase">ANTAH</div>
+<nav class="hidden md:flex gap-10 items-center">
+<a class="font-headline-md text-headline-md text-[#C75B3A] border-b border-[#C75B3A]/30 pb-1" href="#">Home</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="journal_antah.html">About</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="services_antah.html">Services</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="portfolio_antah.html">Portfolio</a>
+<a class="font-headline-md text-headline-md text-stone-500 font-serif hover:text-stone-800 hover:text-[#C75B3A] transition-colors duration-500 ease-in-out" href="contact_antah.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Sunlit living room" class="w-full h-full object-cover" data-alt="Sun-drenched minimalist living room with a cream linen sofa, warm terracotta wall accents, and soft shadows from indoor plants" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQko18aSuSTKwxlEQTc_qwspe-vrgK_eyJYoWl2GzZxoUsIrKfT9AVukWLgNaoRouPsin5rtnoyv3PSaGN6KdRJRF0sg8u0ggp9vDNlNhp5ebfqaMkpnNnf2yaI2sh0r3662PMCsXrO_Uq5kNqPaBJtld-aWOTw0zYIrfHD7W-2cXn6TqapwrEbGc-6cBF-sEWtxjejLrnAyE0jiFfRFDYBYZ3Ou8yoB1iGGDwM5xhR5_oUhtFwzlvKvxVa4EhxfujY38bXz-WYw"/>
+<div class="absolute inset-0 bg-stone-900/10"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 md:px-12 w-full">
+<div class="max-w-2xl bg-surface/80 backdrop-blur-md p-10 md:p-16 border-l-4 border-primary">
+<span class="font-label-sm text-primary uppercase tracking-[0.2em] mb-4 block">Lived-in Luxury</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">Add Life to Your Home</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Antah transforms spaces into stories, blending intentional craftsmanship with the soulful comfort of natural imperfections.</p>
+<div class="flex gap-6">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-sm uppercase tracking-widest hover:bg-primary-container transition-all">Explore Projects</button>
+<button class="border border-secondary text-secondary px-8 py-4 font-label-sm uppercase tracking-widest hover:bg-secondary/5 transition-all">Our Process</button>
+</div>
+</div>
+</div>
+<!-- Botanical Accent -->
+<div class="absolute bottom-10 right-10 botanical-float hidden lg:block">
+<span class="material-symbols-outlined text-[120px] text-secondary">eco</span>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-xl bg-surface-container-low relative">
+<div class="max-w-4xl mx-auto px-8 text-center">
+<span class="material-symbols-outlined text-primary mb-6 scale-150">auto_awesome</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 text-on-surface">Interiors as Living Things</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed italic">
+                    "We believe a home should not be a museum, but a breath. It should evolve with you, gathering the patina of time and the warmth of shared moments. Our philosophy balances high-end sophistication with the tactile reality of stone, wood, and linen."
+                </p>
+<div class="mt-12 h-px w-24 bg-primary/30 mx-auto"></div>
+</div>
+</section>
+<!-- Services Snapshot - Bento Grid Style -->
+<section class="py-xl max-w-7xl mx-auto px-8 md:px-12">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Our Expertise</h2>
+<div class="w-16 h-1 bg-primary mt-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-surface-container p-10 group hover:bg-secondary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:text-secondary transition-colors" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-4">Space Planning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Designing intuitive flows that maximize light and create an effortless transition between living zones.</p>
+<a class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container p-10 group hover:bg-secondary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:text-secondary transition-colors" data-icon="palette">palette</span>
+<h3 class="font-headline-md text-headline-md mb-4">Color &amp; Material</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Curating a tactile palette of terracotta, sage, and raw stone to evoke a sense of grounded serenity.</p>
+<a class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container p-10 group hover:bg-secondary-container transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:text-secondary transition-colors" data-icon="chair">chair</span>
+<h3 class="font-headline-md text-headline-md mb-4">Custom Furnishings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Bespoke furniture pieces crafted by local artisans to fit the unique dimensions of your lifestyle.</p>
+<a class="font-label-sm text-primary uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- Featured Projects - Asymmetric Layout -->
+<section class="py-xl bg-stone-100/50 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 md:px-12">
+<div class="flex justify-between items-end mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface max-w-md">Narratives in Design: Featured Works</h2>
+<a class="font-label-sm text-primary border-b border-primary pb-1 uppercase tracking-widest" href="#">View All Projects</a>
+</div>
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- Project 1 -->
+<div class="col-span-12 md:col-span-7 group">
+<div class="relative overflow-hidden mb-6">
+<img alt="Minimalist Bedroom" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Serene minimalist bedroom with muted sage green walls, textured linen bedding, and a simple wooden platform bed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr7SlAbVy7SIV2CBcftgdblMns6rR-VfOXOLMnQpnME6F3UQcM8D_ZevTcNVEYa2peyR_Sg_C-DZ_8IoWHiB9_EQRV1zGc5DYK4WNd_iqRxBifvYyv5w8Gv8pXuKsp2GAM4u4541eJdPqqG7nNVc-mbtP85GRWw73rWiciQ8SpT7x7hJA85E-vJ8bkAOQsGkc9SEXxNryhDl_CBanwJPRj6rSujXbii0aPnzoY6y1T2bhUyO3ppstTRKM1QVaq9rPG24P0Qc-3uA"/>
+<div class="absolute top-6 right-6 flex gap-2">
+<span class="bg-surface/90 px-3 py-1 font-label-sm text-secondary rounded-full">Linen</span>
+<span class="bg-surface/90 px-3 py-1 font-label-sm text-secondary rounded-full">Oak</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">The Silence of Morning</h4>
+<p class="font-label-sm text-on-surface-variant uppercase">Minimalist Bedroom, Bangalore</p>
+</div>
+<!-- Project 2 -->
+<div class="col-span-12 md:col-span-5 md:mt-24 group">
+<div class="relative overflow-hidden mb-6">
+<img alt="Vibrant Kitchen" class="w-full aspect-[1/1] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Modern kitchen with vibrant terracotta cabinetry, marble countertops, and open wooden shelving for artisanal ceramics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2wK0DBW19rUpM5lY9aq-gZljkhfAHUjC5W0nS0k64uWOdgnIpk3XSEILUcWinvKIAj61ZBrz9eHSse9fIUue-9WpXbbQApLu586TgfF2Yh-6eoHL15Gz5xuFwM1k7KhZGu_Tsdo1aBdjm-a5J69CpVk-B-KCzas9rS0SOeLcITwzD9ljQFKeyoKQQuF3ckGauKb10Z2wn0kgNcqt5L3PKld4lkz-Ytsj3AO63EBI5GqA1mpddcNeVt8YbJssJlRmWE9-Pd5qsjQ"/>
+<div class="absolute top-6 right-6 flex gap-2">
+<span class="bg-surface/90 px-3 py-1 font-label-sm text-secondary rounded-full">Terracotta</span>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">Culinary Heart</h4>
+<p class="font-label-sm text-on-surface-variant uppercase">Vibrant Kitchen, Mumbai</p>
+</div>
+<!-- Project 3 -->
+<div class="col-span-12 md:col-start-2 md:col-span-6 group -mt-12">
+<div class="relative overflow-hidden mb-6">
+<img alt="Cozy Reading Nook" class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Cozy library reading nook with a velvet armchair in deep forest green, floor-to-ceiling wooden bookshelves, and warm lamp lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARjGawQgs-WnY77vi6bgkiUY9N-pSvEULYdEUTwLO2-uWI_v08uYZNIuhtecN_tzsiND5op5j8bQFeKrDqyIEV98cfZSqt6XAQIsmktzWZ7IukAMX16ixNgL87MR9T6REhGF4UPJpsytNXoMaBM5APvdb7oZ6ZamDNXWbelrg3Y5zCt5eR4dvuktK7FHzHrWxb5MVKTRIXk-ufP9ttIRVrRylLiaaczdllWz1N2FbVj3DoH9XCgwnj7FrbKi-aXWOMCgdeB8O4Bw"/>
+</div>
+<h4 class="font-headline-md text-headline-md mb-2">The Reader's Sanctuary</h4>
+<p class="font-label-sm text-on-surface-variant uppercase">Reading Nook, Hyderabad</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-xl bg-surface-container-high relative overflow-hidden">
+<div class="absolute top-0 right-0 p-12 opacity-10">
+<span class="material-symbols-outlined text-[200px] text-secondary">format_quote</span>
+</div>
+<div class="max-w-5xl mx-auto px-8 relative z-10 text-center">
+<div class="flex justify-center mb-8">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<blockquote class="font-headline-lg text-headline-lg text-on-surface-variant mb-10 italic">
+                    "ANTAH didn't just design our house; they designed our home. They understood that with two young children, we needed something durable but didn't want to sacrifice elegance. The result is a space that feels like a hug every time we walk in."
+                </blockquote>
+<div>
+<p class="font-label-sm text-primary uppercase tracking-[0.3em]">Priya &amp; Arjun</p>
+<p class="font-body-md text-on-surface-variant">Bangalore Residence</p>
+</div>
+</div>
+</section>
+<!-- CTA Banner -->
+<section class="mx-8 md:mx-12 my-xl bg-primary-container relative py-24 px-8 overflow-hidden">
+<div class="absolute inset-0 opacity-10 mix-blend-overlay grain-overlay"></div>
+<div class="absolute -bottom-24 -left-24 botanical-float opacity-20">
+<span class="material-symbols-outlined text-[400px] text-on-primary">nest_eco_leaf</span>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto text-center text-on-primary-container">
+<h2 class="font-headline-xl text-headline-xl mb-8">Ready to Add Life to Your Space?</h2>
+<p class="font-body-lg text-body-lg mb-12 opacity-90">Let’s discuss how we can bring intentionality and warmth to your upcoming project.</p>
+<button class="bg-surface text-primary px-12 py-5 font-label-sm uppercase tracking-[0.2em] hover:bg-on-primary-container hover:text-primary-container transition-all shadow-xl shadow-stone-900/10">
+                    Schedule Your Discovery Call
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 w-full py-16 px-8 border-t border-stone-200">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<div class="text-lg font-serif tracking-widest text-stone-800 uppercase mb-4">ANTAH</div>
+<p class="font-serif text-sm tracking-wide text-stone-600 mb-6 max-w-xs">Crafting interiors that celebrate the beauty of living through natural materials and intentional design.</p>
+<p class="font-serif text-sm tracking-wide text-stone-600">© 2024 ANTAH. Design That Breathes.</p>
+</div>
+<div class="grid grid-cols-2 md:flex md:justify-end gap-12">
+<div class="flex flex-col gap-3">
+<h5 class="font-label-sm text-stone-900 uppercase mb-2">Explore</h5>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:underline decoration-stone-300 underline-offset-4 transition-opacity duration-300" href="#">Philosophy</a>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:underline decoration-stone-300 underline-offset-4 transition-opacity duration-300" href="#">Studio Values</a>
+</div>
+<div class="flex flex-col gap-3">
+<h5 class="font-label-sm text-stone-900 uppercase mb-2">Connect</h5>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:underline decoration-stone-300 underline-offset-4 transition-opacity duration-300" href="#">Process</a>
+<a class="font-serif text-sm tracking-wide text-stone-500 hover:text-stone-800 hover:underline decoration-stone-300 underline-offset-4 transition-opacity duration-300 text-[#C75B3A]" href="#">Inquiries</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
